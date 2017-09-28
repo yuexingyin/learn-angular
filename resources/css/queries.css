@@ -1,0 +1,224 @@
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1400px) {
+    .main-nav {
+        margin-right: auto;
+    }
+    
+    .logo{
+        margin-left: 20px;
+    }
+    
+    .logo-black{
+        margin-left: auto;
+    }
+    
+    .leftSide{
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
+    .rightSide{
+        padding-right: 20px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+    
+    .row { padding: 0 2%; }
+}
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1040px) {
+    body { font-size: 18px; }
+    section { padding: 60px 0; }
+    
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .steps-box { margin-top: 10px; }
+    .steps-box:last-child { margin-top: 10px; }
+    .works-steps { margin-bottom: 40px; }
+    .works-step:last-of-type { margin-bottom: 60px; }
+    
+    .app-screen { width: 50%; }
+    
+    .icon-small { 
+        width: 17px;
+        margin-right: 5px;
+    }
+    
+    .course-feature { font-size: 90%; }
+    
+    .plan-box {
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    .plan-price { font-size: 250%; }
+    .contact-form { width: 90%; }
+    
+    
+    .main-nav { display: none; }
+    .mobile-nav-icon {
+        display: inline-block;
+        float: right;
+    }
+    
+    .main-nav {
+        margin-top: 30px;
+        margin-left: 25px;
+        position:relative;  
+    }
+    
+    .main-nav li {
+        display: block;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0;
+        font-size: 100%;    
+    }
+    
+    .sticky .main-nav { margin-top: 10px; }
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding: 10px 0; }
+    .sticky .mobile-nav-icon { margin-top: 10px; }
+    .sticky .mobile-nav-icon i { color: #555; }
+    
+    
+    .contactBar li{
+        font-size: 95%;
+        margin: 10px;
+    }
+    .sticky .dropdown-content a,
+    .dropdown-content a{
+        margin-right: 100px;
+        background-color: white;
+        text-align: center;
+        float: left;
+    }
+}
+
+
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    body { font-size: 16px; }
+    section { padding: 30px 0; }
+    
+    .row,
+    .hero-text-box { padding: 0 4%; }
+    .col { 
+        width: 100%;
+        margin: 0 0 4% 0;
+    }
+    
+    .section-courses img{
+        width: 45%;
+        height: 45%;
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .leftSide a,
+    .leftSide i{
+        display: none;
+    }
+    
+    .course-feature{
+        text-align: center;
+    }
+    
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+    
+    .long-copy {
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    .app-screen { width: 40%; }
+    .steps-box:first-child { text-align: center; }
+    
+    .works-step div {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px;
+        font-size: 120%;
+    }
+    
+    .works-step { margin-bottom: 20px; }
+    .works-step:last-of-type { margin-bottom: 20px; }
+    
+    .map-box{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    }
+    
+    .contactInfo{
+        margin-left: auto;
+        margin-right: auto;
+        list-style: none;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .map{
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .form-box{
+        position: relative;
+        width: 100%;
+        height: 560px;
+        padding-top: 80px;
+    }
+    
+    th, tr, td{
+        font-size: 80%;
+    }
+    
+    .footer-nav{
+        display: block;
+        width: auto;
+        float: none;
+        list-style: none;
+    }
+    
+    .footer-nav li,
+    .footer-nav h3{
+        list-style: none;
+        display: block;
+        text-align: center;
+    }
+    
+    .footer h3{
+        margin-top: 20px;
+    }
+    
+    
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    section { padding: 25px 0; }
+    .contact-form {width: 100%; }
+}
+
