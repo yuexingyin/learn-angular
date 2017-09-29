@@ -1,1 +1,1 @@
-angular.module('kdcourse', ['ngRoute']);
+angular.module('kdcourse', []);

@@ -1,1 +1,13 @@
-angular.module('learnApp', ['ngRoute', 'kdheader', 'kdhome', 'kdfooter']);
+angular.module('learnApp',
+        [
+            'ngRoute',
+            'kdheader',
+            'kdhome',
+            'kdcourse',
+            'birthdayParty',
+            'schoolProgram',
+            'kdlogin',
+            'kdsignup',
+            'aboutUs',
+            'kdfooter'
+        ]);

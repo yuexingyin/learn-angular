@@ -1,1 +1,1 @@
-angular.module('kdhome', ['ngRoute']);
+angular.module('kdhome', []);
