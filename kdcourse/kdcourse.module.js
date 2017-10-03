@@ -1,1 +1,1 @@
-angular.module('kdcourse', []);
+angular.module('kdcourse', ['ngResource']);

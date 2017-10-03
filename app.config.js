@@ -13,6 +13,9 @@ config(['$locationProvider', '$routeProvider',
         when('/courses', {
             template: '<kdcourse></kdcourse>'
         }).
+        when('/courses/:courseId', {
+            template : '<course-detail></course-detail>'
+        }).
         when('/birthdayParty', {
             template: '<birthday-party></birthday-party>'
         }).

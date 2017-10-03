@@ -144,6 +144,16 @@
                 <a href="ScratchGameDesign.html">Read more</a>
             </div>
         </div>
+        <div>
+            <ul class="courses">
+                <li ng-repeat="course in $ctrl.courseList">
+                    <a href="#!/courses/{{course.courseId}}">{{course.courseId}}</a>
+                    <p>{{course.courseName}}</p>
+                    <p>{{course.courseDescription}}</p>
+                </li>
+            </ul>
+
+        </div>
     </div>
     <br>
     <br>
