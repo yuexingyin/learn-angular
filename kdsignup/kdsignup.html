@@ -3,13 +3,13 @@
         <h2>Register to Kiditech</h2>
     </div>
     <div class="row">
-        <form method="post" action="#" class="contact-form">
+        <form method="post" ng-controller="signupController" class="contact-form">
             <div class="row">
                 <div class="col span-1-of-3">
                     <label for="name">First Name:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="text" name="name" id="name" placeholder="Your first name" required>
+                    <input ng-model="firstName" type="text" name="name" id="name" placeholder="Your first name" required>
                 </div>
             </div>
             <div class="row">
@@ -17,7 +17,7 @@
                     <label for="name">Last Name:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="text" name="name" id="name" placeholder="Your last name" required>
+                    <input ng-model="lastName" type="text" name="name" id="name" placeholder="Your last name" required>
                 </div>
             </div>
             <div class="row">
@@ -25,7 +25,7 @@
                     <label for="email">Email:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="email" name="email" id="email" placeholder="Your email" required>
+                    <input ng-model="userEmail" type="email" name="email" id="email" placeholder="Your email" required>
                 </div>
             </div>
             <div class="row">
@@ -33,7 +33,7 @@
                     <label for="password">Password:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="password" name="password" id="password" placeholder="Your password" required>
+                    <input ng-model="userPassword" type="password" name="password" id="password" placeholder="Your password" required>
                 </div>
             </div>
             <div class="row">
@@ -41,7 +41,7 @@
                     <label>&nbsp;</label>
                 </div>
                 <div class="col span-1-of-3">
-                    <center><input type="submit" value="Create User"></center>
+                    <center><input type="submit" ng-click="submit()" value="Create User"></center>
                 </div>
             </div>
         </form>

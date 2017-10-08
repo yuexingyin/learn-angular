@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('kdlogin', []);
+angular.module('kdlogin', ['ngResource']);

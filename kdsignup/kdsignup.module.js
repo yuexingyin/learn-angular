@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('kdsignup', []);
+angular.module('kdsignup', ['ngResource']);
