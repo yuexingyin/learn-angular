@@ -31,6 +31,9 @@ config(['$locationProvider', '$routeProvider',
         when('/aboutUs', {
             template : '<about-us></about-us>'
         }).
+        when('/cartDetail',{
+            template : '<ngcart-cart></ngcart-cart>'
+        }).
         when('/error', {
             template: '<p1>Sorry, there is nothing yet</p1>'
         }).

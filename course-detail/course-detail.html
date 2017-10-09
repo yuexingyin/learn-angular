@@ -3,50 +3,21 @@
     <div class="row">
         <h2>{{$ctrl.course.courseName}}</h2>
     </div>
-    <center><form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-">
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form><br></center>
-    <div class="row">
-        <div class="col span-3-of-3 steps-box">
 
-            <button class="tablink" onclick="openCity('Description', this, 'red')" id="defaultOpen">Description</button>
-            <button class="tablink" onclick="openCity('Curriculum', this, 'green')">Curriculum</button>
-
-            <button class="tablink" onclick="openCity('Reviews', this, 'orange')">Reviews</button>
-            <div id="Description" class="tabcontent">
-                <div class="col span-3-of-3" id="courseDesc">
-                    <center><img src="{{$ctrl.course.courseImg}}" alt="Wonder Dash and Dot"></center>
-                    <h3><b>GRADE REQUIREMENT:</b></h3>
-                    <P>{{$ctrl.course.courseAge}}</P>
-                    <h3><b>COURSE DESCRIPTION:</b></h3>
-                    <P>{{$ctrl.course.courseDescription}}</P>
-                    <h3><b>LEARNING OUTCOMES:</b></h3>
-                    <ul>
-                        <li>{{$ctrl.course.courseOutcome}}</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-            <div id="Curriculum" class="tabcontent">
-                <h3>Curriculum</h3>
-                <p></p>
-            </div>
-
-
-            <div id="Reviews" class="tabcontent">
-                <h3>Reviews</h3>
-                <p></p>
-            </div>
-
-        </div>
+    <div>
+    <ngcart-addtocart id="{{$ctrl.course.courseId}}" name="{{$ctrl.course.courseName}}" price="{{$ctrl.course.coursePrice}}" quantity="1"><button type="button">Add to Cart</button></ngcart-addtocart>
     </div>
-    <br>
-    <br>
+
+    <div class="col span-3-of-3" id="courseDesc">
+        <center><img src="{{$ctrl.course.courseImg}}"></center>
+        <h3><b>GRADE REQUIREMENT:</b></h3>
+        <P>{{$ctrl.course.courseAge}}</P>
+        <h3><b>COURSE DESCRIPTION:</b></h3>
+        <P>{{$ctrl.course.courseDescription}}</P>
+        <h3><b>LEARNING OUTCOMES:</b></h3>
+        <ul>
+            <li>{{$ctrl.course.courseOutcome}}</li>
+        </ul>
+    </div>
     <center><a href="index.html">Go back</a></center>
 </section>

@@ -14,14 +14,12 @@
                             <a href="#" ng-click="logOut()">Logout</a>
                         </div>
                     </li>
-                    <li><a href="#"><i class="ion-android-cart icon-medium"></i>Cart</a></li>
+                    <li><a href="#!/cartDetail"><ngcart-summary></ngcart-summary></a></li>
                 </ul>
                 <ul class="contactBar rightSide" ng-if="isLogin() === false">
                     <li><a href="#!/login">Login</a></li>
                     <li><a href="#!/signup">Register</a>
-                    <li><a href="#"><i class="ion-android-cart icon-medium"></i>Cart</a></li>
-                </ul>
-                <ul class="main-nav js--main-nav">
+                    <li><a href="#!/cartDetail"><ngcart-summary></ngcart-summary></a></li>
                 </ul>
             </div>
         </div>

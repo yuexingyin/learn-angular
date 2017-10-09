@@ -32,7 +32,6 @@ angular.module('kdlogin').controller('loginController', function($scope, $locati
     $scope.submitLogin = function () {
 
         loginService().then(function(response) {
-            console.log("1");
             var customer =  angular.fromJson(response.data);
             if(customer !== null && customer.Status === true) {
                 window.localStorage.setItem('userEmail', $scope.userEmail);
