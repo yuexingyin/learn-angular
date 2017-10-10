@@ -5,4 +5,4 @@ directive("kdheader", function() {
         restrict: 'E',
         templateUrl: "kdheader/kdheader.html"
     };
-})
+});

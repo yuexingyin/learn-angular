@@ -57,78 +57,77 @@
     <div class="row">
         <h2>Popular Courses</h2>
     </div>
-    <div class="row">
+    <div class="row" ng-repeat="course in $ctrl.courseList | limitTo: -4 " ng-if="$index % 4 == 0">
         <div class="col span-1-of-4 box">
-            <img src="resources/img/course1-min.jpg" alt="Wonder Dash and Dot">
-            <h3><a href="">Wonder Dash and Dot</a></h3>
-            <br>
+            <img src="{{$ctrl.courseList[$index].courseImg}}">
+            <h3><a href="#!/courses/{{$ctrl.courseList[$index].courseId}}">{{$ctrl.courseList[$index].courseName}}</a></h3>
             <div class="course-feature">
                 <i class="ion-ios-people icon-small"></i>
-                5 students
+                {{$ctrl.courseList[$index].courseInstructor}}
             </div>
             <div class="course-feature">
                 <i class="ion-social-usd icon-small"></i>
-                <strike>$450.00</strike> $400.00
+                <strike>$450.00</strike> ${{$ctrl.courseList[$index].coursePrice}}
             </div>
             <div class="course-feature">
                 <i class="ion-ios-book icon-small"></i>
-                <a href="">Read more</a>
+                <a href="#!/courses/{{$ctrl.courseList[$index].courseId}}">Read more</a>
             </div>
         </div>
         <div class="col span-1-of-4 box">
-            <img src="resources/img/course2-min.jpg" alt="Demo Robot Vex IQ">
-            <h3><a href="">Robot Vex IQ</a></h3>
+            <img src="{{$ctrl.courseList[$index+1].courseImg}}">
+            <h3><a href="#!/courses/{{$ctrl.courseList[$index+1].courseId}}">{{$ctrl.courseList[$index+1].courseName}}</a></h3>
             <br>
             <div class="course-feature">
                 <i class="ion-ios-people icon-small"></i>
-                4 students
+                {{$ctrl.courseList[$index+1].courseInstructor}}
             </div>
             <div class="course-feature">
                 <i class="ion-social-usd icon-small"></i>
-                <strike>$450.00</strike> $400.00
+                <strike>$450.00</strike> ${{$ctrl.courseList[$index+1].coursePrice}}
             </div>
             <div class="course-feature">
                 <i class="ion-ios-book icon-small"></i>
-                <a href="">Read more</a>
+                <a href="#!/courses/{{$ctrl.courseList[$index+1].courseId}}">Read more</a>
             </div>
         </div>
         <div class="col span-1-of-4 box">
-            <img src="resources/img/course5-min.jpg" alt="3D Design and Tinkercad">
-            <h3><a href="">3D Design and Tinkercad</a></h3>
+            <img src="{{$ctrl.courseList[$index+2].courseImg}}">
+            <h3><a href="#!/courses/{{$ctrl.courseList[$index+2].courseId}}">{{$ctrl.courseList[$index+2].courseName}}</a></h3>
             <br>
             <div class="course-feature">
                 <i class="ion-ios-people icon-small"></i>
-                0 students
+                {{$ctrl.courseList[$index+2].courseInstructor}}
             </div>
             <div class="course-feature">
                 <i class="ion-social-usd icon-small"></i>
-                <strike>$450.00</strike> $400.00
+                <strike>$450.00</strike> ${{$ctrl.courseList[$index+2].coursePrice}}
             </div>
             <div class="course-feature">
                 <i class="ion-ios-book icon-small"></i>
-                <a href="">Read more</a>
+                <a href="#!/courses/{{$ctrl.courseList[$index+2].courseId}}">Read more</a>
             </div>
         </div>
         <div class="col span-1-of-4 box">
-            <img src="resources/img/course6-min.jpg" alt="IoT with Raspberry pi">
-            <h3><a href="">IoT with Raspberry pi</a></h3>
+            <img src="{{$ctrl.courseList[$index+3].courseImg}}">
+            <h3><a href="#!/courses/{{$ctrl.courseList[$index+3].courseId}}">{{$ctrl.courseList[$index+3].courseName}}</a></h3>
             <br>
             <div class="course-feature">
                 <i class="ion-ios-people icon-small"></i>
-                4 students
+                {{$ctrl.courseList[$index+3].courseInstructor}}
             </div>
             <div class="course-feature">
                 <i class="ion-social-usd icon-small"></i>
-                <strike>$450.00</strike> $400.00
+                <strike>$450.00</strike> ${{$ctrl.courseList[$index+3].coursePrice}}
             </div>
             <div class="course-feature">
                 <i class="ion-ios-book icon-small"></i>
-                <a href="">Read more</a>
+                <a href="#!/courses/{{$ctrl.courseList[$index+3].courseId}}">Read more</a>
             </div>
         </div>
     </div><div class="row">
     <br>
-    <center><a href="">View all courses</a></center>
+    <center><a href="#!/courses">View all courses</a></center>
 </div>
 </section>
 
@@ -234,7 +233,3 @@
         </div>
     </div>
 </section>
-
-<div class="map-box">
-    <div class="map"></div>
-</div>

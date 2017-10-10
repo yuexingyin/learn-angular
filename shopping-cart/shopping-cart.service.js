@@ -4,24 +4,37 @@ angular.module('shoppingCart').controller ('shoppingCartController', function($s
     ngCart.setTaxRate(null);
     ngCart.setShipping(null);
 
-    var itemsArray = ngCart.getItems();
+    $scope.payWithPaypal = function () {
 
-    var itemNames = new Array();
+        var subTotal = ngCart.getSubTotal();
 
-    for(var i = 0; i < itemsArray.length; i++){
-        console.log(itemsArray[i]._name);
-        itemNames.push(itemsArray[i]._name);
+        var itemsArray = [];
+
+        for(var i = 0; i < ngCart.getItems().length; i++){
+            itemsArray.push(ngCart.getItemById(ngCart.getItems()[i]._id));
+        }
+
+        var itemNames = [];
+
+        for(var i = 0; i < itemsArray.length; i++){
+            itemNames.push(itemsArray[i]._name);
+        }
+
+        $scope.settings =
+            {"paypal":
+                {
+                    "business": "yyfyou1991@gmail.com",
+                    "item_name" : itemNames,
+                    "sub_total" : subTotal,
+                    "currency_code" : "USD"
+                }
+            };
+
+        for(var j = 0; j < itemsArray.length; j++){
+            ngCart.removeItemById(itemsArray[j]._id);
+            console.log(itemsArray[j]._id);
+        }
     }
-
-    $scope.settings =
-        {"paypal":
-            {
-                "business": "yyfyou1991@gmail.com",
-                "item_name" : itemNames,
-                "currency_code" : "USD"
-            }
-        };
-
 
 
 });

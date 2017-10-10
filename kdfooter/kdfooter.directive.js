@@ -5,4 +5,4 @@ directive("kdfooter", function() {
         restrict: 'E',
         templateUrl: "kdfooter/kdfooter.html"
     };
-})
+});
