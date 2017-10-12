@@ -34,7 +34,10 @@ angular.module('kdlogin').controller('loginController', function($scope, $locati
         loginService().then(function(response) {
             var customer =  angular.fromJson(response.data);
             if(customer !== null && customer.Status === true) {
-                window.localStorage.setItem('userEmail', $scope.userEmail);
+                window.localStorage.setItem('userId', customer.userId);
+                window.localStorage.setItem('userFirstName', customer.firstName);
+                window.localStorage.setItem('userLastName', customer.lastName);
+                window.localStorage.setItem('userEmail', customer.email);
                 $location.path('/home');
             }else{
                 window.alert("This user not exist!");
@@ -47,6 +50,9 @@ angular.module('kdlogin').controller('loginController', function($scope, $locati
     };
 
     $scope.logOut = function () {
+        window.localStorage.removeItem('userId');
+        window.localStorage.removeItem('userFirstName');
+        window.localStorage.removeItem('userLastName');
         window.localStorage.removeItem('userEmail');
         $location.path('/home');
     };

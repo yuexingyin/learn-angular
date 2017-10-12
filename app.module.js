@@ -11,5 +11,6 @@ angular.module('learnApp',
             'kdsignup',
             'aboutUs',
             'kdfooter',
+            'kdprofile',
             'shoppingCart'
         ]);

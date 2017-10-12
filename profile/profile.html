@@ -5,93 +5,67 @@
     <div class="row">
         <center><h3>Name</h3></center>
         <br>
-        <form method="post" action="#" class="contact-form">
+        <form method="post" ng-controller="profileController" class="contact-form">
             <div class="row">
                 <div class="col span-1-of-3">
-                    <label for="name">Username:</label>
+                    <label>First Name:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="text" name="username" id="username" placeholder="Your user name" required>
+                    <label >{{userFirstName}}</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col span-1-of-3">
-                    <label for="name">First Name:</label>
+                    <label>Last Name:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="text" name="name" id="name" placeholder="Your first name" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col span-1-of-3">
-                    <label for="name">Last Name:</label>
-                </div>
-                <div class="col span-2-of-3">
-                    <input type="text" name="name" id="name" placeholder="Your last name" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col span-1-of-3">
-                    <label for="name">Nickname:</label>
-                </div>
-                <div class="col span-2-of-3">
-                    <input type="text" name="nickname" id="nickname" placeholder="Your nickname" required>
+                    <label>{{userLastName}}</label>
                 </div>
             </div>
             <br>
             <center><h3>Contact Information</h3></center>
             <div class="row">
                 <div class="col span-1-of-3">
-                    <label for="email">Email:</label>
+                    <label>Email:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="email" name="email" id="email" placeholder="Your email" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col span-1-of-3">
-                    <label for="name">Website:</label>
-                </div>
-                <div class="col span-2-of-3">
-                    <input type="text" name="website" id="website" placeholder="Your website" required>
+                    <label>{{userEmail}}</label>
                 </div>
             </div>
             <br>
-            <center><h3>About Yourself</h3></center>
-
             <div class="row">
                 <div class="col span-1-of-3">
-                    <label for="name">Biographical Information:</label>
+                    <label>Old Password:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <textarea type="text" name="bio" id="bio" placeholder="Your bio" required></textarea>
+                    <input ng-model="userOldPassword" type="password" placeholder="Your Old password" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col span-1-of-3">
-                    <label for="password">Password:</label>
+                    <label>New Password:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="password" name="password" id="password" placeholder="Your password" required>
+                    <input ng-model="userNewPassword" type="password" placeholder="Your New password" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col span-1-of-3">
-                    <label for="password">Repeat password:</label>
+                    <label>Repeat password:</label>
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="password" name="repeatpassword" id="repeatpassword" placeholder="Repeat password" required>
+                    <input ng-model="repeatNewPassword" type="password" placeholder="Repeat Your New password" required>
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col span-1-of-3">
                     <label>&nbsp;</label>
                 </div>
                 <div class="col span-1-of-3">
-                    <center><input type="submit" value="Create User"></center>
+                    <center><input ng-click="passwordUpdate()" type="submit" value="Update Profile"></center>
                 </div>
             </div>
         </form>
     </div>
+</section>

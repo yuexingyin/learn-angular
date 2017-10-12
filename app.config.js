@@ -31,6 +31,9 @@ config(['$locationProvider', '$routeProvider',
         when('/aboutUs', {
             template : '<about-us></about-us>'
         }).
+        when('/profile', {
+            template : '<kdprofile></kdprofile>'
+        }).
         when('/cartDetail',{
             template : '<ngcart-cart></ngcart-cart>'
         }).

@@ -30,7 +30,10 @@ angular.module('kdsignup').controller('signupController', function($scope, $loca
         signupService().then(function(response) {
             var customer = angular.fromJson(response.data);
             if(customer !== null && customer.status === true) {
-                window.localStorage.setItem('userEmail', $scope.userEmail);
+                window.localStorage.setItem('userId', customer.userId);
+                window.localStorage.setItem('userFirstName', customer.firstName);
+                window.localStorage.setItem('userLastName', customer.lastName);
+                window.localStorage.setItem('userEmail', customer.email);
                 $location.path('/home');
             }else{
                 window.alert("This user already exist!");
